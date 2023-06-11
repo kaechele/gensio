@@ -10,7 +10,7 @@ The gensio/gensio include file has lots of documentation on the
 interfaces.  This files covers general concepts.
 
 The basic principles are the same as the C interface, and you can use
-the man pages for the various C functions for explainations of how
+the man pages for the various C functions for explanations of how
 most of the interfaces work.  It's a pretty straightforward mapping in
 most cases.  Like ``gensio_write(g, ...)`` would map to
 ``g->write(...)``.

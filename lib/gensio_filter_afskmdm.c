@@ -1703,7 +1703,7 @@ afskmdm_iir_filter(float *inbuf, float *outbuf, unsigned int nsamples,
  * Butterworth filter.
  *
  * See https://www.staff.ncl.ac.uk/oliver.hinton/eee305/Chapter5.pdf
- * for more explaination.
+ * for more explanation.
  */
 static void
 afskmdm_calc_iir_coefs(float samplerate, float cutoff,

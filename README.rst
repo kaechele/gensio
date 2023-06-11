@@ -6,7 +6,7 @@ This is gensio (pronounced gen'-see-oh), a framework for giving a
 consistent view of various stream (and packet) I/O types.  You create
 a gensio object (or a gensio), and you can use that gensio without
 having to know too much about what is going on underneath.  You can
-stack gensio on top of another one to add protocol funcionality.  For
+stack gensio on top of another one to add protocol functionality.  For
 instance, you can create a TCP gensio, stack SSL on top of that, and
 stack Telnet on top of that.  It supports a number of network I/O and
 serial ports.  gensios that stack on other gensios are called filters.
@@ -120,7 +120,7 @@ As I continued to add gensios to the library, like crypto, mdns,
 sound, IPMI, sctp, etc. the number of dependencies in the library was
 getting out of control.  Why should you be loading libasound, or
 libOpenIPMI, if you don't need it?  Plus, though the library supported
-adding your own gensios through a programatic API, it had no standard
+adding your own gensios through a programmatic API, it had no standard
 way to add them for the system so you could write your own gensio and
 let everyone on the system use it.
 

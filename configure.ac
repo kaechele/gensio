@@ -11,7 +11,7 @@ AC_PROG_CXX
 AM_PROG_AR
 
 # Per discussions with the Debian maintainer, it's best for
-# maintainers to have all the soname libary versions be the same if
+# maintainers to have all the soname library versions be the same if
 # they come from a single source.  So here it is.
 GENSIO_LIB_VERSION=4:1:0
 AC_SUBST(GENSIO_LIB_VERSION)
@@ -214,7 +214,7 @@ Version: __cplusplus
 _ACEOF
         cplusplusver=`(eval "$ac_cpp conftest.$ac_ext") | grep '^Version:'`
         if test $? -ne 0; then
-            AC_MSG_RESULT([check faied])
+            AC_MSG_RESULT([check failed])
 	    cplusplus=no
         else
 	    cplusplusver=`echo $cplusplusver | sed 's/^Version: //'`

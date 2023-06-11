@@ -179,7 +179,7 @@ Handle various serial port functions.
 
 .SS "SERIAL PORT CONTROLS"
 On a client sergensio, these function set various settings on the
-serial port.  The setting is not necessariy done immediately as it may
+serial port.  The setting is not necessarily done immediately as it may
 have to be sent as a message.  If you supply a done function, it is
 called when the set operation is known to be complete.  The set
 operation may not work (the hardware may not support it, etc.), the
@@ -190,7 +190,7 @@ zero to all the functions below and it will just report the value in
 the done function.
 
 There are blocking function for all of these, see sergensio_b_alloc(3)
-for detais on those.  These are all non-blocking.
+for details on those.  These are all non-blocking.
 .TP 20
 sergensio_baud - Set the baud rate to the integer value.  Not all
 system and hardware support all baud rates, check the done function to

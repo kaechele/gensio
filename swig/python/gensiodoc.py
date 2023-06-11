@@ -79,7 +79,7 @@ class EventHandler:
         new_io - a new channel for the mux gensio
 
         Return an integer. If you return 0, the new channel is
-        accepted.  If you return a GE_xxx erro, it is considered a gensio
+        accepted.  If you return a GE_xxx error, it is considered a gensio
         error and that error is reported as an open channel failure on
         the remote end.  If you return non-zero, the new_io is freed,
         you should not use it.
@@ -1088,7 +1088,7 @@ class gensio_accepter:
         gensio and the C interface for specific gensio_accepter controls.
 
         depth -- The gensio_accepter in the stack to choose.  0 selects the
-            top ond, 1 the second from the top, etc.
+            top one, 1 the second from the top, etc.
             GENSIO_CONTROL_DEPTH_ALL will call the control on every
             gensio_accepter in the stack, GENSIO_CONTROL_DEPTH_FIRST will
             call the control down the stack until a control doesn't

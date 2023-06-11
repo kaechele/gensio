@@ -31,7 +31,7 @@ extern "C" {
 
 /*
  * This should eventually go away in preference to the functions given
- * inthe include just below.
+ * in the include just below.
  */
 #include <gensio/gensio_os_funcs.h>
 

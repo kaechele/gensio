@@ -21,11 +21,11 @@ sample
 
 DFT
 
-  Discrete Fourier Transfor.  You may think "FFT", but an FFT is just
+  Discrete Fourier Transform.  You may think "FFT", but an FFT is just
   an efficient implementation of a DFT.  You can use do a DFT at
   specific frequencies without having to do a full spectrum analysis.
   When I say "DFT at xxx", that's what I'm talking about.  It's just
-  doing a convulution against the sine and cosine of frequency xxx,
+  doing a convolution against the sine and cosine of frequency xxx,
   squaring each of them, then adding them together, and technically
   taking the square root.  That gives you the power at a specific
   frequency in the input signal.  (The code doesn't take a square
@@ -252,6 +252,6 @@ Adjusting Receive Frequencies
 For receive, adjust the frequencies some.  For instance, at 48000
 samples/sec and 1200bps, each sample will be 40 samples long.  A DFT
 at that many samples is going to give 1200Hz resolution, which
-slightly overlaps betwen the 1200 and 2200 mark frequencies.  It
+slightly overlaps between the 1200 and 2200 mark frequencies.  It
 seemed that moving the frequencies away from each other a little would
 help things.  However, testing said otherwise.

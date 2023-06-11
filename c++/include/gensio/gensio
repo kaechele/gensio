@@ -17,7 +17,7 @@
 //#include <iostream>
 
 namespace gensios {
-    // Incuding this in the gensio namespace to keep things neat.
+    // Including this in the gensio namespace to keep things neat.
 #include <gensio/gensio.h>
 #include <gensio/sergensio.h>
 
@@ -123,7 +123,7 @@ namespace gensios {
 	virtual ~Gensio_Open_Done() = default;
     };
 
-    // Used for done handlers for gension operations that cannot fail.
+    // Used for done handlers for gensio operations that cannot fail.
     class GENSIOCPP_DLL_PUBLIC Gensio_Close_Done {
     public:
 	virtual void close_done() = 0;
@@ -131,11 +131,11 @@ namespace gensios {
     };
 
     // Allocate a gensio based upon the given string.  The string
-    // format is defiend in gensio.5.  You must provided an os
+    // format is defined in gensio.5.  You must provide an os
     // function handler as described in gensio_os_funcs.3 and an event
     // handler defined above.
     //
-    // Note that will return a subclass of Gensio depending on the
+    // Note that this will return a subclass of Gensio depending on the
     // particular string provided.
     GENSIOCPP_DLL_PUBLIC
     Gensio *gensio_alloc(std::string str, Os_Funcs &o,
@@ -201,7 +201,7 @@ namespace gensios {
 	// (unless it reports an error).
 	void open(Gensio_Open_Done *done);
 
-	// Open a gensio and wait for it's open peration to complete.
+	// Open a gensio and wait for it's open operation to complete.
 	void open_s();
 
 	// Open a gensio but assume that it's children are already
@@ -215,7 +215,7 @@ namespace gensios {
 	// Write datalen bytes of data to the given gensio.  The
 	// actual number of bytes written is returned.  The
 	// meaning of auxdata depends on the gensio, see gensio.5 for
-	// detais.
+	// details.
 	gensiods write(const void *data, gensiods datalen,
 		       const char *const *auxdata);
 	gensiods write(const std::vector<unsigned char> data,
@@ -238,7 +238,7 @@ namespace gensios {
 	// done handler.
 	void close(Gensio_Close_Done *done = NULL);
 
-	// Like the above, but do it synchronosly.
+	// Like the above, but do it synchronously.
 	void close_s();
 
 	// This is used in specific circumstances to disable a gensio
@@ -272,7 +272,7 @@ namespace gensios {
 	    return gensio_get_type(io, depth);
 	}
 
-	// Return various characterstics about a gensio.  See the
+	// Return various characteristics about a gensio.  See the
 	// gensio_is_xxx.3 man pages for details.
 	inline bool is_client() const { return gensio_is_client(io); }
 	inline bool is_reliable() const { return gensio_is_reliable(io); }
@@ -285,7 +285,7 @@ namespace gensios {
 
 	virtual bool is_serial() { return false; }
 
-	// Turn on/off synchronous mode for a gensio.  In synchrohous
+	// Turn on/off synchronous mode for a gensio.  In synchronous
 	// mode, the gensio will not deliver data via the read call.
 	// You must call the read_s() functions below to read the data.
 	// See the gensio_set_sync() man page for details.
@@ -453,7 +453,7 @@ namespace gensios {
     // the current value is always returned.
     //
     // You can pass a 0 (or NULL in the signature case) into any of
-    // these and it will not set the value, but wull return the
+    // these and it will not set the value, but will return the
     // current value.
     //
     // The valid values for the ones that are not a direct integer
@@ -464,7 +464,7 @@ namespace gensios {
     // operation completes.
     //
     // For the server side, requests are received in the Serial_Event
-    // class, the reponses are sent here.  The done value should
+    // class, the responses are sent here.  The done value should
     // always be NULL and is ignore on the server side.
     class GENSIOCPP_DLL_PUBLIC Serial_Gensio: public Gensio {
     public:

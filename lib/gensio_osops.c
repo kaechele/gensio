@@ -501,7 +501,7 @@ gensio_os_get_net_ifs(struct gensio_os_funcs *o,
 	}
 	if (!ifs[i]) {
 	    /*
-	     * First occurence of this name, allocate info and the
+	     * First occurrence of this name, allocate info and the
 	     * if address array.
 	     */
 	    ifs[i] = gensio_os_funcs_zalloc(o, sizeof(**ifs));
@@ -2047,7 +2047,7 @@ gensio_win_pty_alloc(struct gensio_os_funcs *o,
  * with the integrity level of the calling process, even if the
  * impersonation token is set.  This means that the child process will
  * not be able to do certain operations on the console handles, like
- * WriteConsoleInput.  A discussion of the security limitiations is at
+ * WriteConsoleInput.  A discussion of the security limitations is at
  * https://learn.microsoft.com/en-us/windows/console/console-buffer-security-and-access-rights
  *
  * This was discussed by me with others at:
@@ -3272,7 +3272,7 @@ gensio_unix_pty_start(struct gensio_os_funcs *o,
 
     if (pid == 0) {
 	/*
-	 * Delay getting the slave until here becase ptsname is not
+	 * Delay getting the slave until here because ptsname is not
 	 * thread-safe, but after the fork we are single-threaded.
 	 */
 	char *slave = ptsname(pfd);

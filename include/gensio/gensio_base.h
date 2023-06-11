@@ -61,7 +61,7 @@ struct gensio_filter_cb_control_data {
 #define GENSIO_FILTER_CB_OPEN_DONE	5
 
 /*
- * An asynchronous event has happend where the filter is ready for
+ * An asynchronous event has happened where the filter is ready for
  * lower-level input again.
  */
 #define GENSIO_FILTER_CB_INPUT_READY	6

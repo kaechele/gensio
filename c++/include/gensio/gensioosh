@@ -135,7 +135,7 @@ namespace gensios {
 	     unsigned int port);
 
 	// Allocate an address based on the low-level address.
-	// We assume ethe port is set in this case.
+	// We assume the port is set in this case.
 	Addr(struct gensio_addr *iaddr) {
 	    gaddr = iaddr;
 	    is_port_set = true;

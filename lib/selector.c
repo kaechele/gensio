@@ -224,7 +224,7 @@ struct selector_s
 
     /* Everything below is only used for select() and ignore for epoll. */
 
-    /* These are the offical fd_sets used to track what file descriptors
+    /* These are the official fd_sets used to track what file descriptors
        need to be monitored. */
     volatile fd_set read_set;
     volatile fd_set write_set;

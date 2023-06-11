@@ -67,7 +67,7 @@ dummy, echo, file
   These are just too simple to have a meaningful state machine.
 
 udp
-  UDP is just too wierd to fit into anything standard.  UDP is
+  UDP is just too weird to fit into anything standard.  UDP is
   kind of weird for a stream interface, anyway, but I needed it for
   ser2net.  Tons of users use it.
 

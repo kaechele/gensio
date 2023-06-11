@@ -149,7 +149,7 @@ type Gensio interface {
 
 	// Write the given data and auxdata to the gensio.  The
 	// meaning of auxdata is gensio-specific, see the gensio.5 man
-	// for infor.  Returns the number of bytes actually written.
+	// for information.  Returns the number of bytes actually written.
 	Write(data []byte, auxdata []string) uint64
 
 	// Close the given gensio and all of its children.  If cd is
@@ -260,7 +260,7 @@ type SerialGensio interface {
 	Ri(ri uint, done SerialOpDone)
 	Signature(data []byte, done SerialOpSigDone)
 
-	// Syncrohous functions.  If you pass in a valid timeout,
+	// Synchronous functions.  If you pass in a valid timeout,
 	// these will return GE_TIMEDOUT on a timeout.  If you set
 	// intr to true, it will return GE_INTERRUPTED if a signal
 	// comes in.  On all other errors it raises an exception.
@@ -294,7 +294,7 @@ type Event interface {
 	// number of bytes that you actually process.  Note that if
 	// you do not disable read event, if you are passed an error
 	// or return less than the number of bytes you processed, this
-	// will be called immedately.
+	// will be called immediately.
 	Read(err int, data []byte, auxdata []string) uint64
 
 	// Called when data can be written on the Gensio.

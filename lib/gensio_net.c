@@ -39,7 +39,7 @@ struct net_data {
 
     struct gensio_ll *ll;
 
-    struct gensio_addr *ai; /* Iterater points to the remote. */
+    struct gensio_addr *ai; /* Iterator points to the remote. */
     struct gensio_addr *lai; /* Local address, NULL if not set. */
 
     bool nodelay;

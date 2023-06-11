@@ -14,12 +14,12 @@
  *   basic_server telnet,tcp,3023
  * then telnet to it.
  *
- * If you type in "hello" is reponse with "bonjour".
+ * If you type in "hello" is response with "bonjour".
  *
  * If you type in "goodbye" it responds with "au revior" and closes
  * the connection.
  *
- * If you type in "shutdown" it reponds with "adieu pour toujours" and
+ * If you type in "shutdown" it responds with "adieu pour toujours" and
  * shuts down the server.
  *
  * !!!!!!!!!!!DANGER!!!!!!!!!!!!!!

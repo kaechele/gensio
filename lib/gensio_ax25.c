@@ -709,7 +709,7 @@ struct ax25_chan {
     unsigned int t1v;
     unsigned int srt;
 
-    /* Absolute timeout values, in milliseconds.  zero is diabled. */
+    /* Absolute timeout values, in milliseconds.  zero is disabled. */
     int64_t t1;
     int64_t t2;
     int64_t t3;
@@ -3954,7 +3954,7 @@ ax25_child_write_ready(struct ax25_base *base)
     ax25_base_deref_and_unlock(base);
     return 0;
  out_reenable_chan:
-    /* A write didn't complete, Reenable so we can know when we can finish. */
+    /* A write didn't complete, Re-enable so we can know when we can finish. */
     ax25_base_lock(base);
     if (!gensio_list_link_inlist(&chan->sendlink))
 	gensio_list_add_head(&base->send_list, &chan->sendlink);
@@ -3970,7 +3970,7 @@ ax25_child_write_ready(struct ax25_base *base)
     ax25_base_deref_and_unlock(base);
     return 0;
  out_reenable_base:
-    /* A write didn't complete, Reenable so we can know when we can finish. */
+    /* A write didn't complete, Re-enable so we can know when we can finish. */
     if (base->state == AX25_BASE_OPEN)
 	gensio_set_write_callback_enable(base->child, true);
     ax25_base_deref_and_unlock(base);
@@ -4969,7 +4969,7 @@ str_to_ax25_gensio(const char *str, const char * const args[],
     int err;
     struct gensio *io2;
 
-    /* cb is passed in for parmerr handling, it will be overriden later. */
+    /* cb is passed in for parmerr handling, it will be overridden later. */
     err = str_to_gensio(str, o, cb, user_data, &io2);
     if (err)
 	return err;
@@ -5109,7 +5109,7 @@ str_to_ax25_gensio_accepter(const char *str, const char * const args[],
     int err;
     struct gensio_accepter *acc2 = NULL;
 
-    /* cb is passed in for parmerr handling, it will be overriden later. */
+    /* cb is passed in for parmerr handling, it will be overridden later. */
     err = str_to_gensio_accepter(str, o, cb, user_data, &acc2);
     if (!err) {
 	err = ax25_gensio_accepter_alloc(acc2, args, o, cb, user_data, acc);

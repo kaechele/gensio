@@ -245,7 +245,7 @@ enum certauth_state {
     CERTAUTH_SERVERHELLO = 2,
 
     /*
-     * Server receives the challenge response verifies the reponse and
+     * Server receives the challenge response verifies the response and
      * the certificate against the CA.
      *
      * The app is called before the verification so it can do things

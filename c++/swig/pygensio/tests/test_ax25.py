@@ -38,7 +38,7 @@ class Auxdata_EvHnd(EvHnd):
                                 (str(self.rdauxdata), str(auxdata)))
             for i in range(0, len(auxdata)):
                 if auxdata[i] != self.rdauxdata[i]:
-                    raise Exception("auxdata parameter mismatch, expecte %s, got %s" %
+                    raise Exception("auxdata parameter mismatch, expected %s, got %s" %
                                     (str(self.rdauxdata), str(auxdata)))
         return EvHnd.read(self, err, data, auxdata)
 

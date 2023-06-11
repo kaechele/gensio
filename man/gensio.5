@@ -155,7 +155,7 @@ main channel for a gensio, the other channels will stay open; the
 resources for the main channel will still be kept around until all
 channels are closed.
 
-See the indvidual gensio description for more information on streams
+See the individual gensio description for more information on streams
 and channels.
 .SH "PUBLIC KEY CRYPTOGRAPHY"
 The ssl and certauth gensios use public key cryptography.  This
@@ -323,7 +323,7 @@ That will be specified by the specific gensio.
 .br
 .B hostname = [ipv4|ipv6|ipv6n4,]<name>
 
-A TCP connecting gensio must have the hostname specified.  Mulitiple
+A TCP connecting gensio must have the hostname specified.  Multiple
 hostname/port pairs may be specified.  For a connecting TCP gensio,
 each one will be tried in sequence until a connection is established.
 For acceptor gensios, every specified hostname/port pair will be
@@ -857,7 +857,7 @@ connecting =
 The file gensio opens an (optional) input file and (optional) output
 file for the gensio.  If you need to read/write a file in gensio, you
 .B must
-use this.  Semantics on files for stdio do not alway work correctly.
+use this.  Semantics on files for stdio do not always work correctly.
 
 If an input file is specified, data will be read from the input file
 and delivered on the read interface of the gensio until end of file,
@@ -1181,7 +1181,7 @@ checking certificate and username parameters, and do not save it.
 All these calls should return 0 if they want the authentication to
 immediately succeed, EKEYREJECTED if they reject the authentication,
 ENOTSUP if they want certauth to ignore that part of the authentication,
-or any other errno will result in the connetion being shut down.
+or any other errno will result in the connection being shut down.
 
 The callbacks are:
 .TP
@@ -1191,7 +1191,7 @@ buy the client.  The username will be available if the user provided
 it via GENSIO_CONTROL_USERNAME.
 .TP
 .B GENSIO_EVENT_PRECERT_VERIFY / GENSIO_ACC_EVENT_PRECERT_VERIFY
-On the server side, thi is called after the certificate has been
+On the server side, this is called after the certificate has been
 received but before it is verified.  The user can use this to query
 the certificate and update the certificate authority based on username
 or certificate information.
@@ -2046,7 +2046,7 @@ successive data items in the stream.  So in stereo, sample1 is channel
 
 A buffer is a set of frames.  A buffers's size is specified in frames,
 not bytes.  Reads are always provided in buffer size chunks.  If you
-do not comsume all the data in a buffer, it will give you the rest of
+do not consume all the data in a buffer, it will give you the rest of
 the buffer the next read, until the buffer is consumed.  Writes can be
 written in any size, but it's generally most efficient to always write
 buffer sized chunks.
@@ -2209,7 +2209,7 @@ keytype=rw,key="cm108gpio,<dev>"
 .PP
 See the cm108gpio gensio docs for details.
 
-If you need something more sophisicated, you could create your own
+If you need something more sophisticated, you could create your own
 program to do the keying and add:
 .IP
 key="stdio,mykeyprog --parm1 --parm2",keyon="1",keyoff="0"

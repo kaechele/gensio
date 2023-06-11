@@ -888,7 +888,7 @@ gensio_pam_cb(int num_msg, const struct pam_message **msg,
 				       style == PAM_PROMPT_ECHO_ON);
 	    write_str_to_gensio("\n", io, &timeout, true);
 	    if (err == GE_TIMEDOUT)
-		write_str_to_gensio("Timed out waiting for respnse\n",
+		write_str_to_gensio("Timed out waiting for response\n",
 				    io, &timeout, true);
 	    if (err)
 		goto out_err;
@@ -2880,7 +2880,7 @@ do_daemonize(struct gensio_os_funcs *o)
     } else {
 	/* setsid() is necessary if we really want to demonize */
 	setsid();
-	/* Second fork to really deamonize me. */
+	/* Second fork to really daemonize me. */
 	if ((pid = fork()) > 0) {
 	    exit(0);
 	} else if (pid < 0) {

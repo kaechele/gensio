@@ -2122,7 +2122,7 @@ main(int argc, char *argv[])
 	} else if (strcmp(oshstr, "default") == 0) {
 	    /* Nothing to do. */
 	} else {
-	    fprintf(stderr, "Unknown OS handler fron environment: %s\n",
+	    fprintf(stderr, "Unknown OS handler from environment: %s\n",
 		    oshstr);
 	    exit(1);
 	}

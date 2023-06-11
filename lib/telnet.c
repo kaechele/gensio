@@ -230,7 +230,7 @@ process_telnet_data(unsigned char *outdata, unsigned int outlen,
 		} else {
 		    if (td->telnet_cmd_pos > MAX_TELNET_CMD_SIZE)
 			/* Always store the last character
-			   received in the final postition (the
+			   received in the final position (the
 			   array is one bigger than the max size)
 			   so we can detect the end of the
 			   suboption. */

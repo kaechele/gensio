@@ -526,7 +526,7 @@ HEAP_EXPORT_NAME(remove)(struct heap_s *heap, struct heap_node_s *elem)
 
     elem = to_insert;
 
-    /* Now propigate it to the right place in the tree. */
+    /* Now propagate it to the right place in the tree. */
     if (elem->up && heap_cmp_key(&elem->val, &elem->up->val) < 0) {
 	HEAP_EXPORT_NAME(send_up)(elem, &(heap->top), &(heap->last));
     } else {

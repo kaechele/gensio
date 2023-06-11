@@ -61,7 +61,7 @@ str_to_ratelimit_gensio(const char *str, const char * const args[],
     int err;
     struct gensio *io2;
 
-    /* cb is passed in for parmerr handling, it will be overriden later. */
+    /* cb is passed in for parmerr handling, it will be overridden later. */
     err = str_to_gensio(str, o, cb, user_data, &io2);
     if (err)
 	return err;
@@ -188,7 +188,7 @@ str_to_ratelimit_gensio_accepter(const char *str, const char * const args[],
     int err;
     struct gensio_accepter *acc2 = NULL;
 
-    /* cb is passed in for parmerr handling, it will be overriden later. */
+    /* cb is passed in for parmerr handling, it will be overridden later. */
     err = str_to_gensio_accepter(str, o, cb, user_data, &acc2);
     if (!err) {
 	err = ratelimit_gensio_accepter_alloc(acc2, args, o, cb, user_data,

@@ -64,7 +64,7 @@
 %ignore gensios::Accepter::control(int depth, bool get, unsigned int option,
 				  char *data, gensiods *datalen);
 
-// Convert betwen byte arrays and unsigned char vectors.
+// Convert between byte arrays and unsigned char vectors.
 %typemap(gotype) (std::vector<unsigned char>) "[]byte";
 %typemap(in) (std::vector<unsigned char>) {
     $1.assign((unsigned char *) $input.array,

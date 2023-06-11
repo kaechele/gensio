@@ -844,7 +844,7 @@ mdns_service_browser_callback(AvahiServiceBrowser *ab,
 	return;
     }
 
-    /* See if it aready exists. */
+    /* See if it already exists. */
     gensio_list_for_each(&b->resolvers, l) {
 	r = gensio_container_of(l, struct gensio_mdns_watch_resolver, link);
 

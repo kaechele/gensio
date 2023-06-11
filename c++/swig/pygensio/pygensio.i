@@ -322,7 +322,7 @@ static bool check_for_err(int err)
     $result = PI_add_result($result, o);
 }
 
-// For non-allocating vectors passed from c++ to a direcotry target lang
+// For non-allocating vectors passed from c++ to a directory target lang
 %typemap(typecheck, precedence=SWIG_TYPECHECK_VECTOR) gensios::SimpleUCharVector
 {
     $1 = PI_CanBeBytes($input);
@@ -830,7 +830,7 @@ static bool check_for_err(int err)
 }
 
 ////////////////////////////////////////////////////
-// Define our own Gensio functins.
+// Define our own Gensio functions.
 %rename("") gensios::Gensio::open;
 %rename("") gensios::Gensio::open_nochild;
 %rename("") gensios::Gensio::close;

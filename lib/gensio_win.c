@@ -1326,7 +1326,7 @@ win_iod_socket_init(struct gensio_iod_win *wiod, void *cb_data)
     return GE_NOMEM;
 }
 
-/* Used to pass data into the intitialization routines. */
+/* Used to pass data into the initialization routines. */
 struct win_init_info {
     HANDLE ioh;
     HANDLE processh;

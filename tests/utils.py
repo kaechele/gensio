@@ -724,7 +724,7 @@ def test_shutdown():
             raise Exception("All gensios were not freed in time")
         w.service(1)
     while w.service_now() == 0:
-        # Give some time for everyting to clear out.
+        # Give some time for everything to clear out.
         pass
     del w
     c = sys.getrefcount(o)

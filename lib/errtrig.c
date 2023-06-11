@@ -78,8 +78,8 @@ void errtrig_exit(int rv)
      * Return an error.  The values mean:
      *
      * 0 - No error occurred and the memory allocation failure didn't happen
-     * 1 - An error occurred and the memory allocation failure happenned
-     * 2 - No error occurred and the memory allocation failure happenned
+     * 1 - An error occurred and the memory allocation failure happened
+     * 2 - No error occurred and the memory allocation failure happened
      * 3 - An error occurred and the memory allocation failure didn't happen
      */
     if (rv == 0 && triggered)

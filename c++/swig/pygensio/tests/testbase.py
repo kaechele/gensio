@@ -313,7 +313,7 @@ def test_shutdown():
                             pygensio.gensio_num_alloced())
         w.service(pygensio.gensio_time(0, 1000000))
     while w.service(pygensio.gensio_time(0, 0)) == 0:
-        # Give some time for everyting to clear out.
+        # Give some time for everything to clear out.
         pass
     del w
     o.set_log_handler(None)

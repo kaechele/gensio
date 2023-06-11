@@ -61,7 +61,7 @@ Here are some answer to questions about gensio.
   addresses that they have, and communicate when they change, and use
   all of them.  So you could have a connection stay up even if a
   server transitions over to new IP addresses.  It has better
-  protection agains SYN attacks.  A few other things.
+  protection against SYN attacks.  A few other things.
 
   That said, the current implementations of SCTP (at least the one on
   Linux) leave something to be desired.  There are performance issues

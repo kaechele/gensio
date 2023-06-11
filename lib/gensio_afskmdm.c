@@ -67,7 +67,7 @@ str_to_afskmdm_gensio(const char *str, const char * const args[],
     int err;
     struct gensio *io2;
 
-    /* cb is passed in for parmerr handling, it will be overriden later. */
+    /* cb is passed in for parmerr handling, it will be overridden later. */
     err = str_to_gensio(str, o, cb, user_data, &io2);
     if (err)
 	return err;

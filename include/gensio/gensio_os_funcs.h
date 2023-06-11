@@ -35,7 +35,7 @@ struct sctp_status;
 /* I/O descriptor. */
 struct gensio_iod {
     /*
-     * All iods have a gensio_os_funcs in them, make it available to aovid
+     * All iods have a gensio_os_funcs in them, make it available to avoid
      * having to pass it around.
      */
     struct gensio_os_funcs *f;
@@ -77,7 +77,7 @@ enum gensio_iod_type {
      *
      * If you set the ARGV (and optionally ENV) before calling START,
      * this will start a new program with the given arguments (and
-     * environoment) with the pty as stdio when you call START.  On
+     * environment) with the pty as stdio when you call START.  On
      * Unix it will use the effective UID/GUI for the program.  On
      * Windows it will use the impersonation token of the calling
      * thread.
@@ -288,7 +288,7 @@ struct gensio_winsize {
 #define GENSIO_IOD_CONTROL_SOCKINFO	1000
 
 /*
- * Operations for PTYs.  See the discussion baove GENSIO_IOD_PTY for
+ * Operations for PTYs.  See the discussion above GENSIO_IOD_PTY for
  * details.
  */
 #define GENSIO_IOD_CONTROL_ARGV		2000
@@ -526,7 +526,7 @@ struct gensio_os_funcs {
 
     /*
      * get/free this structure.  At allocation the refcount is one,
-     * get increments the refcounta and free decrements it.  If the
+     * get increments the refcount and free decrements it.  If the
      * refcount reaches zero, free the structure.
      */
     struct gensio_os_funcs *(*get_funcs)(struct gensio_os_funcs *f);
@@ -695,7 +695,7 @@ struct gensio_os_funcs {
      * protocol is one of GENSIO_NET_PROTOCOL_xxx.
 
      * If scan_port is true, scan for port numbers after the
-     * addresses, seperated by a ','.  If the port is not there then
+     * addresses, separated by a ','.  If the port is not there then
      * is_port_set will be set to false.  If the port is there, it
      * will be set to true.  The ports must all be the same or
      * GE_INCONSISTENT is returned.

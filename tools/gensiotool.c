@@ -231,7 +231,7 @@ setup_dummyrand(const char *filename)
 }
 #elif HAVE_OPENSSL
 /*
- * Set a dummy random input file, for reproducable openssl usage for
+ * Set a dummy random input file, for reproducible openssl usage for
  * fuzz testing.
  */
 #include <openssl/rand.h>

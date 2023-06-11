@@ -526,7 +526,7 @@ basen_ll_close_done(void *cb_data, void *close_data)
 	 * places, either filter open or open.  If it's in filter
 	 * open, we need to deliver the open failure to the user,
 	 * otherwise we will already be set to deliver a read/write
-	 * failture.  So if open_done is set, we are in filter open,
+	 * failure.  So if open_done is set, we are in filter open,
 	 * and know to deliver the open failure.
 	 */
 	if (ndata->open_done) {
@@ -1293,7 +1293,7 @@ basen_i_close(struct basen_data *ndata,
     ndata->close_done = close_done;
     ndata->close_data = close_data;
     /*
-     * Set local close no matter what, so it get's delivered if open is
+     * Set local close no matter what, so it gets delivered if open is
      * not yet complete.
      */
     ndata->open_err = GE_LOCALCLOSED;

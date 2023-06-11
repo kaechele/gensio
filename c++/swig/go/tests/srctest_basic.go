@@ -46,7 +46,7 @@ func (oh *CloseDone) CloseDone() {
 type ParmlogEvHnd struct {
 	gensio.EventBase
 	log string
-	paniced bool
+	panicked bool
 }
 
 func (eh *ParmlogEvHnd) Parmlog(s string) {
@@ -56,7 +56,7 @@ func (eh *ParmlogEvHnd) Parmlog(s string) {
 func testParmlog1(o *gensio.OsFuncs, eh *ParmlogEvHnd) gensio.Gensio {
 	defer func() {
 		if err := recover(); err != nil {
-			eh.paniced = true
+			eh.panicked = true
 		}
 	}()
 
@@ -67,7 +67,7 @@ func testParmlog1(o *gensio.OsFuncs, eh *ParmlogEvHnd) gensio.Gensio {
 type ParmlogAccEvHnd struct {
 	gensio.AccepterEventBase
 	log string
-	paniced bool
+	panicked bool
 }
 
 func (eh *ParmlogAccEvHnd) Parmlog(s string) {
@@ -77,7 +77,7 @@ func (eh *ParmlogAccEvHnd) Parmlog(s string) {
 func testParmlog2(o *gensio.OsFuncs, eh *ParmlogAccEvHnd) gensio.Accepter {
 	defer func() {
 		if err := recover(); err != nil {
-			eh.paniced = true
+			eh.panicked = true
 		}
 	}()
 
@@ -92,7 +92,7 @@ func testParmlog(o *gensio.OsFuncs) {
 	eh := &ParmlogEvHnd{}
 
 	testParmlog1(o, eh)
-	if !eh.paniced {
+	if !eh.panicked {
 		panic("Did not panic on error")
 	}
 	if eh.log != "gensio tcp: unknown parameter asdf=x" {
@@ -103,7 +103,7 @@ func testParmlog(o *gensio.OsFuncs) {
 	eha := &ParmlogAccEvHnd{}
 
 	testParmlog2(o, eha)
-	if !eha.paniced {
+	if !eha.panicked {
 		panic("Did not panic on error")
 	}
 	if eha.log != "accepter tcp: unknown parameter asdf=x" {

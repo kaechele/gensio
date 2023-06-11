@@ -1507,7 +1507,7 @@ gensio_tcl_funcs_alloc(struct gensio_os_funcs **ro)
     int err;
 
     /*
-     * TCL won't work until after you create an intepreter.  So do
+     * TCL won't work until after you create an interpreter.  So do
      * that here to avoid crashes in the TCL library.
      */
     interp = Tcl_CreateInterp();

@@ -610,7 +610,7 @@ udpn_finish_read(struct udpn_data *ndata)
     }
 
     if (count < nadata->data_pending_len) {
-	/* The user didn't comsume all the data */
+	/* The user didn't consume all the data */
 	nadata->data_pending_len -= count;
 	nadata->data_pos += count;
 	if (ndata->state == UDPN_OPEN && ndata->read_enabled)
