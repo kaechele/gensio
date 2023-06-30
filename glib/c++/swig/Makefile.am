@@ -1,2 +1,0 @@
-SUBDIRS = . $(PYGENSIO_DIR)
-DIST_SUBDIRS = pygensio
